@@ -1,0 +1,12 @@
+1. El acceso a recursos compartidos siempre debe realizarse desde una sección crÍtica.
+
+R//Ya que esta nos ayuda a tener control sobre los diferentes procesos que acceder a 
+la modificación de un recurso compartido(los cuales son finitos), el cual no debe de ser modificado por mas de un proceso a la vez.
+
+2.La seccion crítica debe ser lo mas pequeña posible. 
+
+R//Por que en esta se va a tener acceso al recurso compartido que en la mayoría de casos sería la memoria compartida del sistema  y esta deberá de garantizar que no más de un proceso lea o escriba datos simultáneamente en esta ya que esto podría generar un problema de desincronización, bloqueos(como el bloqueo mutuo) y mucho tiempo de espera dado que la operación de acceso a memoria es un proceso costoso.
+
+3.. Se debe sacar una copia en la sección crítica de todas la variables compartidas que van a ser utilizadas.
+
+R// Ya que esta se debe de tener control sobre los datos que fueron accedidos por cada uno de los procesos para que estos no sean modificados por otros procesos, por eso se debe guardar una copia de la modificación de estos para con esto no estar modificando  constantemente el recurso compartido que podría ser la memoria del sistema.
