@@ -54,7 +54,7 @@ int main() {
 		r = (r+1)%tamCola;
 		semBuffer.Signal();
 		semCP.Signal();
-		sleep(2);
+		sleep(3);
 		cout << "Consumidor " << pid  << ": El valor recibido en " << pos << " es " << dato << endl;
 		cout.flush();
 	}
